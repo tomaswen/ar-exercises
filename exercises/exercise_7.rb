@@ -9,4 +9,7 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+class Employee < ActiveRecord::Base
+   validates :first_name, :last_name,  presence: true
+   belongs_to :store
+end
