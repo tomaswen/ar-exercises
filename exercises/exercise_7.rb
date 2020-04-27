@@ -9,7 +9,7 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-class Employee < ActiveRecord::Base
-   validates :first_name, :last_name,  presence: true
-   belongs_to :store
-end
+@newStore = gets.chomp
+
+test_store = Store.create(name: @newStore)
+puts test_store.errors.full_messages
